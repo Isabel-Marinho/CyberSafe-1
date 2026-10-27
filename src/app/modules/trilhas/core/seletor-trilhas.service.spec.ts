@@ -50,6 +50,8 @@ describe('SeletorDeTrilhasService', () => {
     it('retorna null se a idade for negativa', () => {
       const resultado = service.selecionarTrilha({ idade: -5 });
       expect(resultado).toBeNull();
+
+      expect(mockTrilhaJogos.verificarValidade).not.toHaveBeenCalled();
     });
 
     it('retorna null se a idade for um número decimal (não inteiro)', () => {

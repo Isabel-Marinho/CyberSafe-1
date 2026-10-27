@@ -25,7 +25,7 @@ export class SeletorDeTrilhasService {
       return null;
     }
 
-    if(dados.idade !== undefined && (dados.idade < 0 || !Number.isInteger(dados.idade))){
+    if(dados.idade !== undefined && !Number.isInteger(dados.idade)){ //Mudança para quebrar a pipe
       return null;
     }
 
